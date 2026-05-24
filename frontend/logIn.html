@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="logIn.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo login.png" alt="School Logo" class="logo log in">
+        <h2>Login</h2>
+        
+        <form id="loginForm">
+            <label>Email</label>
+            <input type="text" name="email" id="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" id="password" required>
+
+            <a href="forgotPassword.html" class="forgot">Forgot Password?</a>
+
+            <div class="button-group">
+                <button type="submit" class="btn login-btn">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            fetch("/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.redirect) {
+                    window.location.href = data.redirect;
+                } else {
+                    alert(data.error);
+                }
+            })
+            .catch(err => console.error(err));
+        });
+    </script>
+</body>
+</html>

@@ -136,10 +136,12 @@ body{
   gap:25px;
 }
 
+/* LEFT SIDE - Profile Picture & Buttons */
 .left-profile{
   width:260px;
   text-align:center;
   padding-top:20px;
+  flex-shrink:0;
 }
 
 .profile-pic{
@@ -200,10 +202,19 @@ body{
   background:#efb2b2;
 }
 
+.delete-btn:hover{
+  background:#e69595;
+}
+
 .edit-btn{
   background:#a7d0c0;
 }
 
+.edit-btn:hover{
+  background:#8fb8a8;
+}
+
+/* RIGHT SIDE - Forms */
 .right-profile{
   flex:1;
   border:2px solid #2d7f95;
@@ -211,19 +222,27 @@ body{
   padding:30px 45px;
 }
 
+/* Form Wrapper - Two Columns Side by Side */
 .form-wrapper{
   display:flex;
-  justify-content:space-between;
   gap:50px;
 }
 
+/* Each Form Section - Left and Right Columns */
 .form-section{
-  width:100%;
+  flex:1;
 }
 
 .form-section h3{
   margin-bottom:18px;
   font-size:22px;
+  padding-bottom:8px;
+  border-bottom:2px solid #18358f;
+  color:#18358f;
+}
+
+.form-section h3 i{
+  margin-right:8px;
 }
 
 .form-group{
@@ -243,9 +262,47 @@ body{
   border-radius:3px;
 }
 
+.form-group input:disabled{
+  background-color:#e9ecef;
+  cursor:not-allowed;
+}
+
+.form-group input:focus{
+  outline:none;
+  border-color:#18358f;
+}
+
+/* Password Wrapper with Eye Icon */
+.password-wrapper{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.password-wrapper input{
+  width:100%;
+  padding-right:40px;
+}
+
+.toggle-password{
+  position:absolute;
+  right:10px;
+  cursor:pointer;
+  color:#666;
+  font-size:16px;
+}
+
+.toggle-password:hover{
+  color:#18358f;
+}
+
+/* Submit Area */
 .submit-area{
   text-align:center;
   margin-top:10px;
+  display:none;
+  gap:15px;
+  justify-content:center;
 }
 
 .submit-btn{
@@ -256,4 +313,17 @@ body{
   border-radius:4px;
   font-weight:bold;
   cursor:pointer;
+}
+
+.submit-btn:hover{
+  background:#8fb8a8;
+}
+
+.cancel-btn{
+  background:#6c757d;
+  color:white;
+}
+
+.cancel-btn:hover{
+  background:#5a6268;
 }
