@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Junior High School Reports</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="logo-section">
+            <img src="logo.png" alt="logo">
+            <div class="logo-text">
+                <h2>PNHS</h2>
+                <p>Student Information Management System</p>
+            </div>
+        </div>
+
+        <div class="admin-box">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+            <span>Admin</span>
+        </div>
+
+      <div class="menu">
+
+                <a href="adminProfile.html" class="menu-item">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Admin Profile</span>
+                </a>
+
+
+                <a href="studentAdmission.html" class="menu-item">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>Student Admission</span>
+                </a>
+
+
+                <a href="studentMasterlist.html" class="menu-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Student Masterlist</span>
+                </a>
+
+                <a href="reports.html" class="menu-item">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Reports</span>
+                </a>
+
+            </div>
+
+            <div class="logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </div>
+
+        </aside>
+
+    <main class="main-content">
+
+        <div class="top-header">
+
+            <div class="header-left">
+
+                <div class="header-icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <div>
+                    <h1>Junior High School Reports</h1>
+                    <p>Pateros National High School Reports Management</p>
+                    <span class="date">Saturday, May 16, 2026</span>
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search by LRN">
+                </div>
+
+        <div class="dropdown">
+
+            <button class="dropdown-btn">
+                See All Status
+                <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <div class="dropdown-content">
+                <a href="#" data-status="ALL">All Status</a>
+                <a href="#" data-status="DROP-OUT">Drop-Out</a>
+                <a href="#" data-status="ENROLLED">Officially Enrolled</a>
+                <a href="#" data-status="PENDING">Pending Docs</a>
+                <a href="#" data-status="TRANSFER-IN">Transferred In</a>
+                <a href="#" data-status="TRANSFER-OUT">Transferred Out</a>
+            </div>
+
+
+                <button class="export-btn">
+                    <i class="fa-solid fa-file-export"></i>
+                    EXPORT LIST
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- REPORT BOX -->
+        <div class="report-wrapper">
+
+            <!-- FILTER -->
+            <div class="filter-section">
+
+                <div class="date-box">
+                    <label>Date from</label>
+                    <input type="date">
+                </div>
+
+                <div class="date-box">
+                    <label>Date to</label>
+                    <input type="date">
+                </div>
+
+            </div>
+
+            <!-- TABLE CONTAINER -->
+            <div class="table-container">
+
+                <!-- TABS -->
+                <div class="tabs">
+
+                    <a href="#">ALL LEVELS</a>
+                    <a href="#" class="active-tab">GRADE 7</a>
+                    <a href="#">GRADE 8</a>
+                    <a href="#">GRADE 9</a>
+                    <a href="#">GRADE 10</a>
+
+                </div>
+
+                <!-- TABLE -->
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>LRN (LEARNER REFERENCE)</th>
+                                <th>FULL NAME</th>
+                                <th>GRADE</th>
+                                <th>SECTION</th>
+                                <th>GEN AVE</th>
+                                <th>STATUS</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>123456789123</td>
+                                <td>Agolo, Philip Miguel</td>
+                                <td>GRADE 7</td>
+                                <td>GUMAMELA</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="status pending">
+                                        PENDING DOCS
+                                    </span>
+                                </td>
+                                <td class="actions">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>123456789123</td>
+                                <td>Sayas, Leonardo M. Jr.</td>
+                                <td>GRADE 7</td>
+                                <td>GUMAMELA</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="status pending">
+                                        PENDING DOCS
+                                    </span>
+                                </td>
+                                <td class="actions">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>123456789123</td>
+                                <td>Tapia, Stefanny D.</td>
+                                <td>GRADE 7</td>
+                                <td>GUMAMELA</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="status pending">
+                                        PENDING DOCS
+                                    </span>
+                                </td>
+                                <td class="actions">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>136737100512</td>
+                                <td>Trimagosa, Jason B.</td>
+                                <td>GRADE 7</td>
+                                <td>GUMAMELA</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="status enrolled">
+                                        OFFICIALLY ENROLLED
+                                    </span>
+                                </td>
+                                <td class="actions">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>136737100512</td>
+                                <td>Ubis, Michel James D.</td>
+                                <td>GRADE 7</td>
+                                <td>GUMAMELA</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="status enrolled">
+                                        OFFICIALLY ENROLLED
+                                    </span>
+                                </td>
+                                <td class="actions">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>136737100512</td>
+                                <td>Umber, Angelica F.</td>
+                                <td>GRADE 7</td>
+                                <td>GUMAMELA</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="status enrolled">
+                                        OFFICIALLY ENROLLED
+                                    </span>
+                                </td>
+                                <td class="actions">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>136737100512</td>
+                                <td>Valera, Kristine Joy P.</td>
+                                <td>GRADE 7</td>
+                                <td>GUMAMELA</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="status enrolled">
+                                        OFFICIALLY ENROLLED
+                                    </span>
+                                </td>
+                                <td class="actions">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>136737100512</td>
+                                <td>Velintino, Gabriel V.</td>
+                                <td>GRADE 7</td>
+                                <td>GUMAMELA</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="status enrolled">
+                                        OFFICIALLY ENROLLED
+                                    </span>
+                                </td>
+                                <td class="actions">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

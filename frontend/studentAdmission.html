@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PNHS Admission</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <link rel="stylesheet" href="studentAdmission.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo-section">
+                <img src="logo.png" alt="logo">
+
+                <div class="logo-text">
+                    <h2>PNHS</h2>
+                    <p>Student Information Management System</p>
+                </div>
+            </div>
+
+      <div class="menu">
+
+                <a href="adminProfile.html" class="menu-item">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Admin Profile</span>
+                </a>
+
+
+                <a href="studentAdmission.html" class="menu-item">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>Student Admission</span>
+                </a>
+
+
+                <a href="studentMasterlist.html" class="menu-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Student Masterlist</span>
+                </a>
+
+                <a href="reports.html" class="menu-item">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Reports</span>
+                </a>
+
+            </div>
+
+            <div class="logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- HEADER -->
+            <div class="page-header">
+
+                <div class="header-icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <div>
+                    <h1>Junior High School Admission</h1>
+                    <p>Student’s Admission for Pateros National High School</p>
+                </div>
+
+            </div>
+
+            <!-- FORM CONTAINER -->
+            <div class="form-container">
+
+                <div class="school-header">
+
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Pateros_National_High_School_logo.png" alt="logo">
+
+                    <h2>Pateros National High School</h2>
+
+                    <p>
+                        P. Herrera St., Brgy. San Pedro, Pateros, Metro Manila, 1620
+                    </p>
+
+                    <button class="admission-btn">
+                        Admission
+                    </button>
+
+                </div>
+
+                <!-- PERSONAL INFO -->
+                <div class="section-title blue">
+                    <span></span>
+                    <h3>PERSONAL INFORMATION</h3>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="e.g. First Name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="e.g. Last Name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Extension Name e.g, Jr., III (If applicable)</label>
+                        <input type="text"
+                        placeholder="Extension Name e.g, Jr., III (If applicable)">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Date of Birth</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Gender</label>
+
+                        <select>
+                            <option>Select Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Age</label>
+                        <input type="text" placeholder="Student Age">
+                    </div>
+
+                </div>
+
+                <!-- ACADEMIC DETAILS -->
+                <div class="section-title blue margin-top">
+                    <span></span>
+                    <h3>ACADEMIC DETAILS</h3>
+                </div>
+
+                <div class="form-grid single">
+
+                    <div class="input-group full-width">
+                        <label>Learner Reference Number (LRN)</label>
+                        <input type="text" placeholder="12 - digit number">
+                    </div>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>Grade Level Applying For</label>
+
+                        <select>
+                            <option>Grade 7 (JHS)</option>
+                            <option>Grade 8 (JHS)</option>
+                            <option>Grade 9 (JHS)</option>
+                            <option>Grade 10 (JHS)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Last School Attended</label>
+                        <input type="text" placeholder="School Name">
+                    </div>
+
+                </div>
+
+                <!-- REQUIRED DOCUMENTS -->
+                <div class="section-title gold margin-top">
+                    <span></span>
+                    <h3>REQUIRED DOCUMENTS</h3>
+                </div>
+
+                <div class="document-box">
+
+                    <div class="document-top">
+
+                        <div>
+                            <h4>Certificate of Good Moral Character</h4>
+
+                            <p>Status: Approved & Verified</p>
+                        </div>
+
+                        <button class="approved-badge">
+                            Approved
+                        </button>
+
+                    </div>
+
+                    <p class="document-text">
+                        The uploaded document has been verified as authentic by the registrar.
+                        No further action needed.
+                    </p>
+
+                    <div class="document-buttons">
+
+                        <button class="approve-btn">
+                            Mark as Approved
+                        </button>
+
+                        <button class="disapprove-btn">
+                            Mark as Disapproved
+                        </button>
+
+                    </div>
+
+                    
+
+                <div class="submit-wrapper">
+                    <button class="submit-btn">
+                        Submit Admission Application
+                    </button>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+<script>
+
+const tabs = document.querySelectorAll(".tab");
+const rows = document.querySelectorAll("tbody tr");
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(t => t.classList.remove("active-tab"));
+        tab.classList.add("active-tab");
+
+        const grade = tab.dataset.grade;
+
+        rows.forEach(row => {
+
+            row.style.display =
+            grade === "ALL" || row.dataset.grade === grade
+            ? ""
+            : "none";
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

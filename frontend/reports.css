@@ -1,0 +1,484 @@
+# Replace your whole `reports.css` with this code
+
+```css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#dbe5ec;
+    overflow:hidden;
+}
+
+.container{
+    display:flex;
+    width:100%;
+    height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:255px;
+    background:#1d3f97;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 14px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.logo-section img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-text h2{
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    line-height:18px;
+}
+
+.logo-text p{
+    color:#d8e3ff;
+    font-size:9px;
+    width:150px;
+    line-height:12px;
+    margin-top:3px;
+}
+
+.admin-box{
+    height:55px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding-left:20px;
+    color:white;
+    font-size:14px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.admin-box i{
+    color:#f0c93d;
+    font-size:18px;
+}
+
+.menu{
+    flex:1;
+    padding-top:15px;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:13px 20px;
+    margin:8px 12px;
+    border-radius:6px;
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.menu-item i{
+    width:18px;
+    color:#f0c93d;
+    font-size:16px;
+}
+
+.menu-item:hover,
+.menu-item:nth-child(4){
+    background:#284db8;
+}
+
+.logout{
+    height:58px;
+    border-top:1px solid rgba(255,255,255,0.15);
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding-left:20px;
+    color:white;
+    font-size:14px;
+    font-weight:500;
+}
+
+.logout i{
+    font-size:16px;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:15px;
+}
+
+.title-section{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+}
+
+.header-icon i{
+    font-size:45px;
+    color:#1f3b99;
+}
+
+.title-section h1{
+    font-size:28px;
+    margin-bottom:4px;
+    color:#111827;
+}
+
+.title-section p{
+    font-size:15px;
+    color:#666;
+}
+
+/* HEADER RIGHT */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* SEARCH */
+
+.search-box{
+    width:230px;
+    height:45px;
+
+    background:white;
+
+    border:1px solid #888;
+    border-radius:5px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:0 14px;
+}
+
+.search-box i{
+    color:#666;
+}
+
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:15px;
+}
+
+/* DROPDOWN */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-btn{
+    height:45px;
+
+    padding:0 18px;
+
+    border:none;
+    border-radius:6px;
+
+    background:#2147c7;
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.dropdown-btn:hover{
+    background:#2c4fc7;
+}
+
+.dropdown-btn i{
+    margin-left:8px;
+}
+
+.dropdown-content{
+    position:absolute;
+    top:50px;
+    left:0;
+
+    width:190px;
+
+    background:white;
+
+    border-radius:6px;
+
+    overflow:hidden;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+    display:none;
+
+    z-index:100;
+}
+
+.dropdown-content a{
+    display:block;
+
+    padding:12px 14px;
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-size:15px;
+}
+
+.dropdown-content a:hover{
+    background:#f2f2f2;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+
+.export-btn{
+    height:32px;
+    padding:0 16px;
+    border:none;
+    background:#2147c7;
+    color:white;
+    font-size:11px;
+    font-weight:600;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+.export-btn i{
+    margin-right:5px;
+}
+
+/* ================= REPORT WRAPPER ================= */
+
+.report-wrapper{
+    border:2px solid #4a97b7;
+    border-radius:4px;
+    background:#f7f7f7;
+    padding:10px;
+    height:600px;
+}
+
+.filter-section{
+    display:flex;
+    gap:14px;
+    margin-bottom:10px;
+}
+
+.date-box{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.date-box label{
+    font-size:11px;
+    color:#222;
+}
+
+.date-box input{
+    width:300px;
+    height:22px;
+    border:1px solid #9ca8b1;
+    background:#dde6ee;
+    padding:0 8px;
+    font-size:11px;
+    outline:none;
+}
+
+.table-container{
+    border:2px solid #4a97b7;
+    border-radius:4px;
+    background:#f7f7f7;
+    padding:10px;
+    height:520px;
+}
+
+.tabs{
+    display:flex;
+    gap:25px;
+    padding-left:10px;
+    margin-bottom:15px;
+}
+
+.tabs a{
+    text-decoration:none;
+    color:#29459f;
+    font-size:10px;
+    font-weight:600;
+}
+
+.active-tab{
+    text-decoration:underline !important;
+}
+
+.table-wrapper{
+    border:1px solid #b7c4cb;
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#e3ecef;
+}
+
+thead th{
+    text-align:left;
+    padding:11px 10px;
+    font-size:10px;
+    color:#666;
+    font-weight:700;
+}
+
+tbody{
+    display:block;
+    max-height:370px;
+    overflow-y:auto;
+}
+
+thead,
+tbody tr{
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+tbody td{
+    padding:11px 10px;
+    font-size:10px;
+    color:#27449f;
+    font-weight:600;
+}
+
+tbody tr:hover{
+    background:#f5f8fc;
+}
+
+.status{
+    padding:4px 8px;
+    border-radius:20px;
+    font-size:9px;
+    font-weight:700;
+    display:inline-block;
+}
+
+.pending{
+    background:#efe2a4;
+    color:#9d8700;
+}
+
+.enrolled{
+    background:#d4edd2;
+    color:#3f8b45;
+}
+
+.actions{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.actions i:nth-child(1){
+    color:#d8a137;
+    cursor:pointer;
+}
+
+.actions i:nth-child(2){
+    color:#d64a4a;
+    cursor:pointer;
+}
+
+tbody::-webkit-scrollbar{
+    width:6px;
+}
+
+tbody::-webkit-scrollbar-thumb{
+    background:#bcc8cf;
+    border-radius:10px;
+}
+
+tbody::-webkit-scrollbar-track{
+    background:#edf2f5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+    .sidebar{
+        width:220px;
+    }
+
+    .date-box input{
+        width:240px;
+    }
+}
+
+@media(max-width:992px){
+
+    body{
+        overflow:auto;
+    }
+
+    .container{
+        flex-direction:column;
+        height:auto;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .top-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .header-right{
+        flex-wrap:wrap;
+    }
+
+    .filter-section{
+        flex-direction:column;
+    }
+
+    .date-box input{
+        width:100%;
+    }
+}

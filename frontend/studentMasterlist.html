@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Masterlist</title>
+
+<link rel="stylesheet" href="studentMasterlist.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+<div>
+
+    <div class="logo">
+        <img src="logo.png" alt="">
+        <div class="logo-text">
+            <h3>PNHS</h3>
+            <p>Student Information Management System</p>
+        </div>
+    </div>
+
+    <div class="menu">
+
+        <a href="adminProfile.html" class="menu-item">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Admin Profile</span>
+        </a>
+
+        <a href="studentAdmission.html" class="menu-item">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Student Admission</span>
+        </a>
+
+        <a href="studentMasterlist.html" class="menu-item">
+            <i class="fa-solid fa-users"></i>
+            <span>Student Masterlist</span>
+        </a>
+
+        <a href="reports.html" class="menu-item">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Reports</span>
+        </a>
+
+    </div>
+
+          <div class="logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Logout</span>
+            </div>
+
+        </aside>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+<!-- HEADER -->
+<div class="header">
+
+    <div class="title-section">
+        <div class="header-icon">
+            <i class="fa-solid fa-user-graduate"></i>
+        </div>
+
+        <div>
+            <h1>Junior High School Masterlist</h1>
+            <p>Pateros National High School</p>
+        </div>
+    </div>
+
+    <div class="header-right">
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search by LRN">
+        </div>
+
+        <!-- STATUS DROPDOWN -->
+        <div class="dropdown">
+
+            <button class="dropdown-btn">
+                See All Status
+                <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <div class="dropdown-content">
+                <a href="#" data-status="ALL">All Status</a>
+                <a href="#" data-status="DROP-OUT">Drop-Out</a>
+                <a href="#" data-status="ENROLLED">Officially Enrolled</a>
+                <a href="#" data-status="PENDING">Pending Docs</a>
+                <a href="#" data-status="TRANSFER-IN">Transferred In</a>
+                <a href="#" data-status="TRANSFER-OUT">Transferred Out</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- TABLE -->
+<div class="masterlist-container">
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+<tr>
+    <th>LRN</th>
+    <th>Name</th>
+    <th>Grade</th>
+    <th>Section</th>
+    <th>Gen Ave</th>
+    <th>Status</th>
+    <th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="ENROLLED">
+    <td>123456789123</td>
+    <td>Panis, Sandara L.</td>
+    <td>GRADE 10</td>
+    <td>ROSAS</td>
+    <td>92</td>
+    <td><span class="status enrolled">ENROLLED</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="PENDING">
+    <td>123456789123</td>
+    <td>Sayas, Leonardo M. Jr.</td>
+    <td>GRADE 7</td>
+    <td>GUMAMELA</td>
+    <td>92</td>
+    <td><span class="status pending">PENDING</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+<tr data-status="DROP-OUT">
+    <td>136737100512</td>
+    <td>Mangui, Kathleen R.</td>
+    <td>GRADE 9</td>
+    <td>SAMPAGUITA</td>
+    <td>92</td>
+    <td><span class="status drop">DROP-OUT</span></td>
+    <td class="actions">
+        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-trash"></i>
+    </td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<!-- STATUS FILTER SCRIPT (CLEAN) -->
+<script>
+
+const statusLinks = document.querySelectorAll(".dropdown-content a");
+const rows = document.querySelectorAll("tbody tr");
+
+statusLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const selectedStatus = link.dataset.status;
+
+        rows.forEach(row => {
+            const rowStatus = row.dataset.status;
+
+            if (selectedStatus === "ALL" || rowStatus === selectedStatus) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+
+    });
+});
+
+</script>
+
+</body>
+</html>

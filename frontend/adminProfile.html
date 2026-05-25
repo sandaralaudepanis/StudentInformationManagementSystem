@@ -5,95 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin Profile</title>
 
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="adminProfile.css">
 </head>
 
 <body>
 
-  <div class="sidebar">
+<div class="container">
 
-    <div class="top-section">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
 
-      <div class="logo-area">
-        <div class="logo">
-          <img src="logo.png" alt="Logo">
-        </div>
-        <div class="system-title">
-          <h2>PNHS</h2>
+    <div>
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="logo.png" alt="">
+
+        <div class="logo-text">
+          <h3>PNHS</h3>
           <p>Student Information Management System</p>
         </div>
       </div>
 
-      <div class="admin-link">
-        <i class="fa-solid fa-user-shield"></i>
-        <span>Admin</span>
-      </div>
-
+      <!-- MENU -->
       <div class="menu">
 
-        <div class="menu-item" onclick="window.location.href='studentAdmission.html'">
+        <a href="adminProfile.html" class="menu-item">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Admin</span>
+        </a>
+
+        <a href="studentAdmission.html" class="menu-item">
           <i class="fa-solid fa-user-plus"></i>
           <span>Student Admission</span>
-        </div>
+        </a>
 
-        <div class="menu-item" onclick="window.location.href='studentInformation.html'">
+        <a href="studentMasterlist.html" class="menu-item">
           <i class="fa-solid fa-users"></i>
           <span>Student Masterlist</span>
-        </div>
+        </a>
 
-        <div class="menu-item">
+        <a href="" class="menu-item">
           <i class="fa-solid fa-file-lines"></i>
           <span>Reports</span>
-        </div>
+        </a>
 
       </div>
-    </div>
 
+    <!-- LOGOUT -->
     <div class="logout" onclick="logout()">
       <i class="fa-solid fa-right-from-bracket"></i>
       <span>Logout</span>
     </div>
 
-  </div>
+  </aside>
 
-  <div class="main-content">
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
 
+    <!-- PAGE TITLE -->
     <div class="page-title">
-      <i class="fa-solid fa-user fa-3x"></i>
+
+      <div class="title-icon">
+        <i class="fa-solid fa-user"></i>
+      </div>
+
       <div>
         <h1>Admin Profile</h1>
         <p>Admin Information</p>
       </div>
+
     </div>
 
+    <!-- PROFILE CONTAINER -->
     <div class="profile-container">
 
-      <!-- Left Side - Profile Picture & Actions -->
+      <!-- LEFT PROFILE -->
       <div class="left-profile">
 
         <div class="profile-pic">
-          <i class=""></i>
+          <i class="fa-solid fa-user"></i>
         </div>
-        <p class="email" id="displayEmail">Admin01@gmail.com</p>
+
+        <p class="email" id="displayEmail">
+          admin01@gmail.com
+        </p>
 
         <div class="button-group">
-          <button class="btn delete-btn" onclick="deleteAccount()">Delete</button>
-          <button class="btn edit-btn" id="editBtn" onclick="enableEdit()">Edit</button>
+          <button class="btn delete-btn" onclick="deleteAccount()">
+            Delete
+          </button>
+
+          <button class="btn edit-btn" id="editBtn" onclick="enableEdit()">
+            Edit
+          </button>
         </div>
 
       </div>
 
-      <!-- Right Side - Forms -->
+      <!-- RIGHT PROFILE -->
       <div class="right-profile">
 
-        <!-- Form Wrapper - Two Columns Side by Side -->
         <div class="form-wrapper">
 
-          <!-- Personal Information Section -->
+          <!-- PERSONAL INFO -->
           <div class="form-section">
-            <h3><i class="fa-solid fa-user"></i> Personal Information</h3>
-            
+
+            <h3>
+              <i class="fa-solid fa-user"></i>
+              Personal Information
+            </h3>
+
             <div class="form-group">
               <label>Name</label>
               <input type="text" id="adminName" disabled>
@@ -108,195 +134,176 @@
               <label>Phone Number</label>
               <input type="text" id="adminPhone" disabled>
             </div>
+
           </div>
 
-          <!-- Change Password Section -->
+          <!-- PASSWORD -->
           <div class="form-section">
-            <h3><i class="fa-solid fa-lock"></i> Change Password</h3>
+
+            <h3>
+              <i class="fa-solid fa-lock"></i>
+              Change Password
+            </h3>
 
             <div class="form-group">
               <label>Current Password</label>
+
               <div class="password-wrapper">
                 <input type="password" id="currentPassword" disabled>
-                <i class="" onclick="togglePassword('currentPassword')"></i>
+
+                <i class="fa-solid fa-eye"
+                  onclick="togglePassword('currentPassword', this)">
+                </i>
               </div>
             </div>
 
             <div class="form-group">
               <label>New Password</label>
+
               <div class="password-wrapper">
                 <input type="password" id="newPassword" disabled>
-                <i class="" onclick="togglePassword('newPassword')"></i>
+
+                <i class="fa-solid fa-eye"
+                  onclick="togglePassword('newPassword', this)">
+                </i>
               </div>
             </div>
 
             <div class="form-group">
               <label>Confirm New Password</label>
+
               <div class="password-wrapper">
                 <input type="password" id="confirmPassword" disabled>
-                <i class="" onclick="togglePassword('confirmPassword')"></i>
+
+                <i class="fa-solid fa-eye"
+                  onclick="togglePassword('confirmPassword', this)">
+                </i>
               </div>
             </div>
+
           </div>
 
         </div>
 
-        <!-- Submit Buttons -->
-        <div class="submit-area" id="submitArea" style="display: none;">
-          <button class="submit-btn" onclick="saveProfile()">Save Changes</button>
-          <button class="submit-btn cancel-btn" onclick="cancelEdit()">Cancel</button>
+        <!-- SUBMIT AREA -->
+        <div class="submit-area" id="submitArea">
+
+          <button class="submit-btn" onclick="saveProfile()">
+            Save Changes
+          </button>
+
+          <button class="submit-btn cancel-btn" onclick="cancelEdit()">
+            Cancel
+          </button>
+
         </div>
 
       </div>
 
     </div>
 
-  </div>
+  </main>
 
-  <script>
-    // Load Admin Data on Page Load
-    document.addEventListener("DOMContentLoaded", loadAdminData);
+</div>
 
-    function loadAdminData() {
-        fetch("/api/admin")
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("adminName").value = data.name || "";
-            document.getElementById("adminEmail").value = data.email || "";
-            document.getElementById("adminPhone").value = data.phone_number || "";
-            document.getElementById("displayEmail").textContent = data.email || "";
-       
+<script>
 
-            if (data.email) {
-            document.getElementById("displayEmail").textContent = data.email;
-            console.log("Email loaded: " + data.email); // Check in browser console
-        }
-          })
+document.addEventListener("DOMContentLoaded", loadAdminData);
 
-        .catch(err => console.error(err));
+function loadAdminData(){
+
+    document.getElementById("adminName").value = "Juan Dela Cruz";
+    document.getElementById("adminEmail").value = "admin01@gmail.com";
+    document.getElementById("adminPhone").value = "09123456789";
+    document.getElementById("displayEmail").textContent = "admin01@gmail.com";
+}
+
+function enableEdit(){
+
+    document.getElementById("adminName").disabled = false;
+    document.getElementById("adminEmail").disabled = false;
+    document.getElementById("adminPhone").disabled = false;
+
+    document.getElementById("currentPassword").disabled = false;
+    document.getElementById("newPassword").disabled = false;
+    document.getElementById("confirmPassword").disabled = false;
+
+    document.getElementById("submitArea").style.display = "flex";
+
+    document.getElementById("editBtn").style.display = "none";
+}
+
+function cancelEdit(){
+
+    document.getElementById("adminName").disabled = true;
+    document.getElementById("adminEmail").disabled = true;
+    document.getElementById("adminPhone").disabled = true;
+
+    document.getElementById("currentPassword").disabled = true;
+    document.getElementById("newPassword").disabled = true;
+    document.getElementById("confirmPassword").disabled = true;
+
+    document.getElementById("submitArea").style.display = "none";
+
+    document.getElementById("editBtn").style.display = "inline-block";
+
+    document.getElementById("currentPassword").value = "";
+    document.getElementById("newPassword").value = "";
+    document.getElementById("confirmPassword").value = "";
+}
+
+function togglePassword(inputId, icon){
+
+    const input = document.getElementById(inputId);
+
+    if(input.type === "password"){
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    }
+    else{
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    }
+}
+
+function saveProfile(){
+
+    const newPassword =
+      document.getElementById("newPassword").value;
+
+    const confirmPassword =
+      document.getElementById("confirmPassword").value;
+
+    if(newPassword !== confirmPassword){
+        alert("Passwords do not match!");
+        return;
     }
 
-    // Enable Edit Mode
-    function enableEdit() {
-        document.getElementById("adminName").disabled = false;
-        document.getElementById("adminEmail").disabled = false;
-        document.getElementById("adminPhone").disabled = false;
-        document.getElementById("currentPassword").disabled = false;
-        document.getElementById("newPassword").disabled = false;
-        document.getElementById("confirmPassword").disabled = false;
-        document.getElementById("submitArea").style.display = "flex";
-        document.getElementById("editBtn").style.display = "none";
+    alert("Profile Updated!");
+
+    cancelEdit();
+}
+
+function deleteAccount(){
+
+    const confirmDelete =
+      confirm("Are you sure you want to delete your account?");
+
+    if(confirmDelete){
+        alert("Account deleted!");
     }
+}
 
-    // Cancel Edit
-    function cancelEdit() {
-        document.getElementById("adminName").disabled = true;
-        document.getElementById("adminEmail").disabled = true;
-        document.getElementById("adminPhone").disabled = true;
-        document.getElementById("currentPassword").disabled = true;
-        document.getElementById("newPassword").disabled = true;
-        document.getElementById("confirmPassword").disabled = true;
-        document.getElementById("submitArea").style.display = "none";
-        document.getElementById("editBtn").style.display = "block";
+function logout(){
 
-        // Reset password fields
-        document.getElementById("currentPassword").value = "";
-        document.getElementById("newPassword").value = "";
-        document.getElementById("confirmPassword").value = "";
+    alert("Logging out...");
 
-        // Reset password input types
-        document.getElementById("currentPassword").type = "password";
-        document.getElementById("newPassword").type = "password";
-        document.getElementById("confirmPassword").type = "password";
+    window.location.href = "login.html";
+}
 
-        loadAdminData();
-    }
-
-    // Toggle Password Visibility
-    function togglePassword(inputId) {
-        const input = document.getElementById(inputId);
-        const icon = input.nextElementSibling;
-
-        if (input.type === "password") {
-            input.type = "text";
-            icon.classList.remove("fa-eye");
-            icon.classList.add("fa-eye-slash");
-        } else {
-            input.type = "password";
-            icon.classList.remove("fa-eye-slash");
-            icon.classList.add("fa-eye");
-        }
-    }
-
-    // Save Profile
-    function saveProfile() {
-        const name = document.getElementById("adminName").value;
-        const email = document.getElementById("adminEmail").value;
-        const phone_number = document.getElementById("adminPhone").value;
-        const currentPassword = document.getElementById("currentPassword").value;
-        const newPassword = document.getElementById("newPassword").value;
-        const confirmPassword = document.getElementById("confirmPassword").value;
-
-        // Validate current password
-        if (currentPassword === "") {
-            alert("Please enter your current password to save changes!");
-            return;
-        }
-
-        // Check password match
-        let password = currentPassword;
-        if (newPassword !== "" || confirmPassword !== "") {
-            if (newPassword !== confirmPassword) {
-                alert("New passwords do not match!");
-                return;
-            }
-            if (newPassword.length < 6) {
-                alert("New password must be at least 6 characters!");
-                return;
-            }
-            password = newPassword;
-        }
-
-        fetch("/api/admin/update", {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ name, email, phone_number, password })
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            cancelEdit();
-            loadAdminData();
-        })
-        .catch(err => console.error(err));
-    }
-
-    // Delete Account
-    function deleteAccount() {
-        const confirmDelete = confirm("Are you sure you want to delete your account?");
-        if (confirmDelete) {
-            alert("Account deleted! Redirecting to login...");
-            logout();
-        }
-    }
-
-    // Logout
-    function logout() {
-        fetch("/api/logout", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            window.location.href = data.redirect;
-        })
-        .catch(err => console.error(err));
-    }
-  </script>
+</script>
 
 </body>
 </html>
