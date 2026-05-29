@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Profile</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="adminProfile.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div>
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="logo.png" alt="">
+
+        <div class="logo-text">
+          <h3>PNHS</h3>
+          <p>Student Information Management System</p>
+        </div>
+      </div>
+
+      <!-- MENU -->
+      <div class="menu">
+
+        <a href="adminProfile.html" class="menu-item">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Admin</span>
+        </a>
+
+        <a href="studentAdmission.html" class="menu-item">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Student Admission</span>
+        </a>
+
+        <a href="studentMasterlist.html" class="menu-item">
+          <i class="fa-solid fa-users"></i>
+          <span>Student Masterlist</span>
+        </a>
+
+        <a href="" class="menu-item">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Reports</span>
+        </a>
+
+      </div>
+
+    <!-- LOGOUT -->
+    <div class="logout" onclick="logout()">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span>Logout</span>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+
+      <div class="title-icon">
+        <i class="fa-solid fa-user"></i>
+      </div>
+
+      <div>
+        <h1>Admin Profile</h1>
+        <p>Admin Information</p>
+      </div>
+
+    </div>
+
+    <!-- PROFILE CONTAINER -->
+    <div class="profile-container">
+
+      <!-- LEFT PROFILE -->
+      <div class="left-profile">
+
+        <div class="profile-pic">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <p class="email" id="displayEmail">
+          admin01@gmail.com
+        </p>
+
+        <div class="button-group">
+          <button class="btn delete-btn" onclick="deleteAccount()">
+            Delete
+          </button>
+
+          <button class="btn edit-btn" id="editBtn" onclick="enableEdit()">
+            Edit
+          </button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT PROFILE -->
+      <div class="right-profile">
+
+        <div class="form-wrapper">
+
+          <!-- PERSONAL INFO -->
+          <div class="form-section">
+
+            <h3>
+              <i class="fa-solid fa-user"></i>
+              Personal Information
+            </h3>
+
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" id="adminName" disabled>
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="adminEmail" disabled>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="text" id="adminPhone" disabled>
+            </div>
+
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="form-section">
+
+            <h3>
+              <i class="fa-solid fa-lock"></i>
+              Change Password
+            </h3>
+
+            <div class="form-group">
+              <label>Current Password</label>
+
+              <div class="password-wrapper">
+                <input type="password" id="currentPassword" disabled>
+
+                <i class="fa-solid fa-eye"
+                  onclick="togglePassword('currentPassword', this)">
+                </i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>New Password</label>
+
+              <div class="password-wrapper">
+                <input type="password" id="newPassword" disabled>
+
+                <i class="fa-solid fa-eye"
+                  onclick="togglePassword('newPassword', this)">
+                </i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Confirm New Password</label>
+
+              <div class="password-wrapper">
+                <input type="password" id="confirmPassword" disabled>
+
+                <i class="fa-solid fa-eye"
+                  onclick="togglePassword('confirmPassword', this)">
+                </i>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SUBMIT AREA -->
+        <div class="submit-area" id="submitArea">
+
+          <button class="submit-btn" onclick="saveProfile()">
+            Save Changes
+          </button>
+
+          <button class="submit-btn cancel-btn" onclick="cancelEdit()">
+            Cancel
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", loadAdminData);
+
+function loadAdminData(){
+
+    document.getElementById("adminName").value = "Juan Dela Cruz";
+    document.getElementById("adminEmail").value = "admin01@gmail.com";
+    document.getElementById("adminPhone").value = "09123456789";
+    document.getElementById("displayEmail").textContent = "admin01@gmail.com";
+}
+
+function enableEdit(){
+
+    document.getElementById("adminName").disabled = false;
+    document.getElementById("adminEmail").disabled = false;
+    document.getElementById("adminPhone").disabled = false;
+
+    document.getElementById("currentPassword").disabled = false;
+    document.getElementById("newPassword").disabled = false;
+    document.getElementById("confirmPassword").disabled = false;
+
+    document.getElementById("submitArea").style.display = "flex";
+
+    document.getElementById("editBtn").style.display = "none";
+}
+
+function cancelEdit(){
+
+    document.getElementById("adminName").disabled = true;
+    document.getElementById("adminEmail").disabled = true;
+    document.getElementById("adminPhone").disabled = true;
+
+    document.getElementById("currentPassword").disabled = true;
+    document.getElementById("newPassword").disabled = true;
+    document.getElementById("confirmPassword").disabled = true;
+
+    document.getElementById("submitArea").style.display = "none";
+
+    document.getElementById("editBtn").style.display = "inline-block";
+
+    document.getElementById("currentPassword").value = "";
+    document.getElementById("newPassword").value = "";
+    document.getElementById("confirmPassword").value = "";
+}
+
+function togglePassword(inputId, icon){
+
+    const input = document.getElementById(inputId);
+
+    if(input.type === "password"){
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    }
+    else{
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    }
+}
+
+function saveProfile(){
+
+    const newPassword =
+      document.getElementById("newPassword").value;
+
+    const confirmPassword =
+      document.getElementById("confirmPassword").value;
+
+    if(newPassword !== confirmPassword){
+        alert("Passwords do not match!");
+        return;
+    }
+
+    alert("Profile Updated!");
+
+    cancelEdit();
+}
+
+function deleteAccount(){
+
+    const confirmDelete =
+      confirm("Are you sure you want to delete your account?");
+
+    if(confirmDelete){
+        alert("Account deleted!");
+    }
+}
+
+function logout(){
+
+    alert("Logging out...");
+
+    window.location.href = "login.html";
+}
+
+</script>
+
+</body>
+</html>
